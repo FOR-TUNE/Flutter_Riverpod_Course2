@@ -53,6 +53,7 @@ class HomePage extends ConsumerWidget {
     // final counter = ref.watch(counterProvider);
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         // Now, here we wish to use the appBar to display the actual count value.
         // We are doing this because we don't want the entire widget to be rebuild.
         title: Consumer(
@@ -74,7 +75,10 @@ class HomePage extends ConsumerWidget {
               ref.read(counterProvider.notifier).increment();
             },
             child: const Text(
-              'Increment',
+              'Increment Counter',
+              style: TextStyle(
+                fontSize: 16,
+              ),
             ),
           ),
         ],
